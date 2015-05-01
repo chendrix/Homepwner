@@ -76,6 +76,10 @@
 		AEAEC26D1AF41F9000A6E1FE /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				AEAEC28E1AF41FC700A6E1FE /* Controllers */,
+				AEAEC28F1AF41FC700A6E1FE /* Models */,
+				AEAEC2901AF41FC700A6E1FE /* Resources */,
+				AEAEC2911AF41FC700A6E1FE /* Views */,
 				AEAEC2721AF41F9000A6E1FE /* AppDelegate.h */,
 				AEAEC2731AF41F9000A6E1FE /* AppDelegate.m */,
 				AEAEC2751AF41F9000A6E1FE /* Images.xcassets */,
@@ -109,6 +113,34 @@
 				AEAEC2831AF41F9000A6E1FE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEAEC28E1AF41FC700A6E1FE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AEAEC28F1AF41FC700A6E1FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AEAEC2901AF41FC700A6E1FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AEAEC2911AF41FC700A6E1FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
