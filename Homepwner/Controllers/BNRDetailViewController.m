@@ -9,6 +9,7 @@
 #import "BNRDetailViewController.h"
 
 #import "BNRItem.h"
+#import "BNRImageStore.h"
 
 @interface BNRDetailViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -40,6 +41,8 @@
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
+    [[BNRImageStore sharedStore] setImage:image forKey:self.item.itemKey];
+    
     self.imageView.image = image;
     
     [self dismissViewControllerAnimated:YES completion:NULL];
@@ -70,6 +73,7 @@
     }
     
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+    self.imageView.image = [[BNRImageStore sharedStore] imageForKey:item.itemKey];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -73,6 +73,9 @@
                 </textField>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJ8-l2-pqp">
                     <rect key="frame" x="20" y="333" width="560" height="203"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="203" id="zvT-Ms-rXK"/>
+                    </constraints>
                 </imageView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCI-Yy-TAm">
                     <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -92,7 +95,6 @@
                 <constraint firstItem="N0I-ye-Gm2" firstAttribute="height" secondItem="Y7r-Rt-9OW" secondAttribute="height" id="8cz-gZ-hbX"/>
                 <constraint firstItem="XqW-cA-MAW" firstAttribute="centerY" secondItem="N0I-ye-Gm2" secondAttribute="centerY" id="9o7-8y-bVy"/>
                 <constraint firstAttribute="trailing" secondItem="BXJ-gP-PB6" secondAttribute="trailing" constant="30" id="CYV-MZ-WhT"/>
-                <constraint firstItem="lCI-Yy-TAm" firstAttribute="top" secondItem="gJ8-l2-pqp" secondAttribute="bottom" constant="20" id="E06-aZ-w1L"/>
                 <constraint firstAttribute="bottom" secondItem="lCI-Yy-TAm" secondAttribute="bottom" id="Eul-4q-CbZ"/>
                 <constraint firstItem="Mr5-bI-50I" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="GHz-HH-nxw"/>
                 <constraint firstItem="Y7r-Rt-9OW" firstAttribute="centerY" secondItem="zEF-Rs-FzZ" secondAttribute="centerY" id="KfB-EF-XSk"/>

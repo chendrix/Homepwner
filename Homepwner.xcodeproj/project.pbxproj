@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C5E4881AF740EF004C46BB /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E4871AF740EF004C46BB /* BNRImageStore.m */; };
 		AEAEC2711AF41F9000A6E1FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAEC2701AF41F9000A6E1FE /* main.m */; };
 		AEAEC2741AF41F9000A6E1FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAEC2731AF41F9000A6E1FE /* AppDelegate.m */; };
 		AEAEC2761AF41F9000A6E1FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAEC2751AF41F9000A6E1FE /* Images.xcassets */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83C5E4861AF740EF004C46BB /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		83C5E4871AF740EF004C46BB /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 		AEAEC26B1AF41F9000A6E1FE /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAEC26F1AF41F9000A6E1FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEAEC2701AF41F9000A6E1FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				AEAEC2961AF4223C00A6E1FE /* BNRItem.m */,
 				AEAEC2981AF422D800A6E1FE /* BNRItemStore.h */,
 				AEAEC2991AF422D800A6E1FE /* BNRItemStore.m */,
+				83C5E4861AF740EF004C46BB /* BNRImageStore.h */,
+				83C5E4871AF740EF004C46BB /* BNRImageStore.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			files = (
 				AEAEC2A31AF44EB000A6E1FE /* BNRDetailViewController.m in Sources */,
 				AEAEC29A1AF422D800A6E1FE /* BNRItemStore.m in Sources */,
+				83C5E4881AF740EF004C46BB /* BNRImageStore.m in Sources */,
 				AEAEC2941AF420FB00A6E1FE /* BNRItemsViewController.m in Sources */,
 				AEAEC2971AF4223C00A6E1FE /* BNRItem.m in Sources */,
 				AEAEC2741AF41F9000A6E1FE /* AppDelegate.m in Sources */,
