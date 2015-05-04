@@ -36,6 +36,7 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     
+    imagePicker.allowsEditing = YES;
     imagePicker.delegate = self;
     
     [self presentViewController:imagePicker animated:YES completion:NULL];
@@ -43,7 +44,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    UIImage *image = info[UIImagePickerControllerEditedImage];
     
     [[BNRImageStore sharedStore] setImage:image forKey:self.item.itemKey];
     
