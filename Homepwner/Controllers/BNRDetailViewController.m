@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *clearImageButtonItem;
 
 @end
 
@@ -42,6 +43,11 @@
     [self presentViewController:imagePicker animated:YES completion:NULL];
 }
 
+- (IBAction)clearImage:(id)sender {
+    self.imageView.image = NULL;
+    [self.clearImageButtonItem setEnabled:NO];
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerEditedImage];
@@ -50,6 +56,7 @@
     
     self.imageView.image = image;
     
+    [self.clearImageButtonItem setEnabled:YES];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
@@ -78,7 +85,13 @@
     }
     
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
-    self.imageView.image = [[BNRImageStore sharedStore] imageForKey:item.itemKey];
+    
+    UIImage *image = [[BNRImageStore sharedStore] imageForKey:item.itemKey];
+    self.imageView.image = image;
+    
+    if (!image) {
+        [self.clearImageButtonItem setEnabled:NO];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
