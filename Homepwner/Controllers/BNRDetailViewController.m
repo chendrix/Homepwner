@@ -9,6 +9,7 @@
 #import "BNRDetailViewController.h"
 
 #import "BNRItem.h"
+#import "BNREditItemDateController.h"
 
 @interface BNRDetailViewController ()
 
@@ -17,10 +18,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) UIBarButtonItem *doneButtonItem;
+@property (weak, nonatomic) IBOutlet UIButton *changeDateCreatedButton;
 
 @end
 
 @implementation BNRDetailViewController
+
 
 - (instancetype)init
 {
@@ -88,6 +91,13 @@
     item.itemName = self.nameField.text;
     item.serialNumber = self.serialNumberField.text;
     item.valueInDollars = [self.valueField.text intValue];
+}
+
+- (IBAction)changeDateCreated:(id)sender {
+    BNREditItemDateController *eidc = [[BNREditItemDateController alloc] init];
+    eidc.item = self.item;
+    
+    [self.navigationController pushViewController:eidc animated:YES];
 }
 
 @end

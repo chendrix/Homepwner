@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C5E4841AF7260B004C46BB /* BNREditItemDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C5E4821AF7260B004C46BB /* BNREditItemDateController.m */; };
+		83C5E4851AF7260B004C46BB /* BNREditItemDateController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C5E4831AF7260B004C46BB /* BNREditItemDateController.xib */; };
 		AEAEC2711AF41F9000A6E1FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAEC2701AF41F9000A6E1FE /* main.m */; };
 		AEAEC2741AF41F9000A6E1FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAEC2731AF41F9000A6E1FE /* AppDelegate.m */; };
 		AEAEC2761AF41F9000A6E1FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAEC2751AF41F9000A6E1FE /* Images.xcassets */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83C5E4811AF7260B004C46BB /* BNREditItemDateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNREditItemDateController.h; sourceTree = "<group>"; };
+		83C5E4821AF7260B004C46BB /* BNREditItemDateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNREditItemDateController.m; sourceTree = "<group>"; };
+		83C5E4831AF7260B004C46BB /* BNREditItemDateController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNREditItemDateController.xib; sourceTree = "<group>"; };
 		AEAEC26B1AF41F9000A6E1FE /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAEC26F1AF41F9000A6E1FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEAEC2701AF41F9000A6E1FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +142,9 @@
 				AEAEC2A01AF44EB000A6E1FE /* BNRDetailViewController.h */,
 				AEAEC2A11AF44EB000A6E1FE /* BNRDetailViewController.m */,
 				AEAEC2A21AF44EB000A6E1FE /* BNRDetailViewController.xib */,
+				83C5E4811AF7260B004C46BB /* BNREditItemDateController.h */,
+				83C5E4821AF7260B004C46BB /* BNREditItemDateController.m */,
+				83C5E4831AF7260B004C46BB /* BNREditItemDateController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 				AEAEC2A41AF44EB000A6E1FE /* BNRDetailViewController.xib in Resources */,
 				AEAEC2791AF41F9000A6E1FE /* LaunchScreen.xib in Resources */,
 				AEAEC2761AF41F9000A6E1FE /* Images.xcassets in Resources */,
+				83C5E4851AF7260B004C46BB /* BNREditItemDateController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +281,7 @@
 				AEAEC2971AF4223C00A6E1FE /* BNRItem.m in Sources */,
 				AEAEC2741AF41F9000A6E1FE /* AppDelegate.m in Sources */,
 				AEAEC2711AF41F9000A6E1FE /* main.m in Sources */,
+				83C5E4841AF7260B004C46BB /* BNREditItemDateController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
