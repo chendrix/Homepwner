@@ -16,10 +16,41 @@
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) UIBarButtonItem *doneButtonItem;
 
 @end
 
 @implementation BNRDetailViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillAppear) name:UIKeyboardWillShowNotification object:self.view.window];
+    }
+    return self;
+}
+
+- (UIBarButtonItem *)doneButtonItem
+{
+    if (!_doneButtonItem)
+    {
+        _doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeKeyboard)];
+    }
+    
+    return _doneButtonItem;
+}
+
+- (void)keyboardWillAppear
+{
+    [self.navigationItem setRightBarButtonItem:self.doneButtonItem animated:FALSE];
+}
+
+- (void)closeKeyboard
+{
+    self.navigationItem.rightBarButtonItem = nil;
+    [self.view endEditing:YES];
+}
 
 - (void)setItem:(BNRItem *)item
 {
@@ -58,4 +89,5 @@
     item.serialNumber = self.serialNumberField.text;
     item.valueInDollars = [self.valueField.text intValue];
 }
+
 @end
