@@ -7,6 +7,8 @@
 //
 
 #import "BNRItemsViewController.h"
+
+#import "BNRDetailViewController.h"
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 
@@ -35,15 +37,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[BNRItemStore sharedStore] allItems] count];
+    return [self.allItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
-    NSArray *items = [[BNRItemStore sharedStore] allItems];
-    BNRItem *item = [items objectAtIndex:[indexPath row]];
+    BNRItem *item = [self.allItems objectAtIndex:[indexPath row]];
     cell.textLabel.text = [item description];
     
     return cell;
@@ -63,7 +64,7 @@
 {
     BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
     
-    NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
+    NSInteger lastRow = [self.allItems indexOfObject:newItem];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     
@@ -90,11 +91,15 @@
     return _headerView;
 }
 
+- (NSArray *)allItems
+{
+    return [[BNRItemStore sharedStore] allItems];
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSArray *items = [[BNRItemStore sharedStore] allItems];
-        BNRItem *item = [items objectAtIndex:[indexPath row]];
+        BNRItem *item = [self.allItems objectAtIndex:[indexPath row]];
         [[BNRItemStore sharedStore] removeItem:item];
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -104,6 +109,14 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
     [[BNRItemStore sharedStore] moveItemAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{    
+    BNRDetailViewController *detailViewController = [[BNRDetailViewController alloc] init];
+    detailViewController.item = self.allItems[indexPath.row];
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
