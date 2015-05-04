@@ -24,7 +24,9 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        // Customization
+        UINavigationItem *navItem = self.navigationItem;
+        
+        navItem.title = @"Homepwner";
     }
     
     return self;
